@@ -94,6 +94,8 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Autowired
     private RequestTimingInterceptor requestTimingInterceptor;
+    
+    
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {

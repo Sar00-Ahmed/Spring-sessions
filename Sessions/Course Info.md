@@ -40,3 +40,7 @@ If you have a background in Object-Oriented Programming (OOP), you should be fin
 
 ##### What if I'm new to programming?
 **I do not recommend starting with a framework like Spring.** While it is technically possible, it requires a tremendous amount of self-learning and extra effort to catch up on fundamental programming concepts. It is better to learn the basics of programming first.
+
+# Pre-sessions
+## database
+Researchers should prepare a sample database diagram for an e-commerce (collab)
