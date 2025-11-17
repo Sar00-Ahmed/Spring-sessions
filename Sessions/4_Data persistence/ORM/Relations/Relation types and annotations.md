@@ -90,7 +90,7 @@ public class Car {
 3. Optional - Set up a join column: **The default behavior for a @OneToMany relationship is to use a join table**, but you can optionally use the `@JoinColumn` annotation to use a join column instead. 
 
 > [!warning]
-> using `@oneToMany` in a unidirectional relation with `@JoinColumn` can cause performance issues and is not the recommended approach you can read more about this in the [[Appendix#Unidirectional `@OneToMany` performance|Appendix]]
+> using `@oneToMany` in a unidirectional relation with `@JoinColumn` can cause performance issues and is not the recommended approach you can read more about this in the [[Appendices/Appendix#Unidirectional `@OneToMany` performance|Appendix]]
 
 ``` Java
 @Entity

@@ -41,6 +41,19 @@ If you have a background in Object-Oriented Programming (OOP), you should be fin
 ##### What if I'm new to programming?
 **I do not recommend starting with a framework like Spring.** While it is technically possible, it requires a tremendous amount of self-learning and extra effort to catch up on fundamental programming concepts. It is better to learn the basics of programming first.
 
-# Pre-sessions
-## database
-Researchers should prepare a sample database diagram for an e-commerce (collab)
+# In this course we will Attempt to cover some soft skills you will need as a dev
+- Patience lots of it (Affects debugging, and human interaction, needs external training)
+- Presentation skills (Affects final presentation of your work. this covers preparation, communication, body language and graphic design)
+- Team leader skills 
+	- Organisation skills (tools like Trello and how to divide tasks)
+	- Delegation skills (know yourself and others observational skills, hr skills)
+	- Motivation 
+	- Initiative (need to act fast, fill gaps, constant feedback, fix problems)
+- General Communication skills (affects team work, needs Emotional intelligence, and again external training)
+
+– all these skills complete each other, if you lack one you can learn it. as for what we call (tebaa) you can still cut their fangs even if they still exist.
+
+**The goal of document is to keep you aware that you need these but building most of these skills need mostly trial and error or a tutor and a role model**
+
+
+

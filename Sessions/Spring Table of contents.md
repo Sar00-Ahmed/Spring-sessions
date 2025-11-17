@@ -5,8 +5,6 @@
 
 
 [[Security]]
-[[Integration]]
-[[Common libraries]]
 - - - 
 [[Spring Structure.canvas|Spring Structure]]
 

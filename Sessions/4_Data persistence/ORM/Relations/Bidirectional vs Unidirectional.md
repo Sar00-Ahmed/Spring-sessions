@@ -108,7 +108,7 @@ post.setUser(user);
 // Now in-memory state is inconsistent!
 ```
 
-you can read more about this issue in the [[Appendix#Bidirectional Inconsistency Issue|Appendix]]
+you can read more about this issue in the [[Appendices/Appendix#Bidirectional Inconsistency Issue|Appendix]]
 ### Schema Generation Differences
 
 **Unidirectional `@OneToMany` (default):**

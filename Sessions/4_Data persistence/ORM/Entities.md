@@ -4,7 +4,6 @@
 you need to place the `@Entity` Annotation on the class and **We must also ensure that the entity has a no-arg constructor and a primary key**
 
 we can specify the table name using the `@Table` annotation
-
 ## Defining IDs
 Each JPA entity must have a primary key that uniquely identifies it. The `@Id` annotations defines the primary key. 
 
@@ -29,7 +28,7 @@ public class Student {
 ### Columns
 we can use the `@Column` annotation to mention the details of a column in the table.
 
-_you can check more on the column properties in the [[Appendix#`@column` properties||Appendix]]_
+_you can check more on the column properties in the [[Appendices/Appendix#`@column` properties||Appendix]]_
 
 ``` Java
 @Column(name="STUDENT_NAME", length=50, nullable=false, unique=false) private String name;

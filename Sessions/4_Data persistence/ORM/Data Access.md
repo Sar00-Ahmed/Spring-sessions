@@ -15,28 +15,28 @@ It allows developers to:
  > Developers wanted an abstraction over JDBC to reduce boilerplate.
 
 ``` Java
-Connection conn = DriverManager.getConnection(...); 
-PreparedStatement stmt = conn.prepareStatement("SELECT * FROM users WHERE id=?"); stmt.setInt(1, 42); 
-ResultSet rs = stmt.executeQuery();
+Connection conn = DriverManager.getConnection(...); //connects to db
+PreparedStatement stmt = conn.prepareStatement("SELECT * FROM users WHERE id=?"); // manually writing statement
+stmt.setInt(1, 42);  // manually setting parameters
+ResultSet rs = stmt.executeQuery(); //collecting results in result set
 
 ```
 
 ### 2. Rise of ORM (Object-Relational Mapping) — Late 1990s to Early 2000s
 
-A programming technique that bridges the gap between object-oriented programming languages and relational databases by mapping application objects to database tables, allowing developers to interact with data using familiar objects instead of raw SQL queries.
+A **programming technique** that bridges the gap between object-oriented programming languages and relational databases by mapping application objects to database tables, allowing developers to interact with data using familiar objects instead of raw SQL queries.
     
 ORM handles:
 - Mapping Java fields to table columns
 - Managing object lifecycle (insert, update, delete)     
 - Automatic SQL generation        
-
 ##### Benefits:
 - Reduces boilerplate code
 - Encourages domain-driven design
 - Hides database details
 
 ### 3. Hibernate (2001)
-Hibernate is the most popular ORM implementation in Java. Initially developed independently of Java EE
+Hibernate is the most popular **ORM implementation in Java**. Initially developed independently of Java EE
 
 Hibernate introduced:
 - Entity mappings via XML (later via annotations)
@@ -56,15 +56,15 @@ factory.close();
 ```
 ### 4. JPA (Java Persistence API) — 2006 (part of Java EE 5)
 
-JPA is the official Java standard for ORM, introduced to unify ORM practices. It defines a specification (interfaces, annotations), not an implementation.
+JPA is the **official Java standard for ORM**, introduced to unify ORM practices. It defines a **specification** (interfaces, annotations), **not an implementation**.
 ##### JPA provides
-
-- @Entity, @Id, @OneToMany, etc. annotations
+- `@Entity`, `@Id`, `@OneToMany`, etc. annotations
 - EntityManager API
 - JPQL (Java Persistence Query Language)
 - Life-cycle callbacks
 
- Note: Hibernate is still used under the hood in most Spring apps, but now through JPA.
+> [!hint]
+>  Hibernate is still used under the hood in most Spring apps, but now through JPA.
 
 ``` Java
 public interface UserRepository extends JpaRepository<User, Integer> {}
