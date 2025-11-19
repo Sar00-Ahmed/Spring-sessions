@@ -1,0 +1,1 @@
+AOP allows interceptors behaviour
