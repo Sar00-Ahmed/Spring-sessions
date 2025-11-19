@@ -196,7 +196,7 @@ public class Book {
 }
 ```
 
-you can read more on it’s advanced usages in the [[Appendix#Advanced `@JsonIdentityInfo` Scenarios|Appendix]]
+you can read more on it’s advanced usages in the [[Appendices/Appendix#Advanced `@JsonIdentityInfo` Scenarios|Appendix]]
 # Other solutions
 
 - DTO Pattern (Recommended for Complex Applications)

@@ -1,16 +1,20 @@
+
 > [!definition]
 > Entities in JPA are nothing but POJOs representing data that can be persisted in the database. An entity represents a table stored in a database. Every instance of an entity represents a row in the table.
 
-you need to place the `@Entity` Annotation on the class and **We must also ensure that the entity has a no-arg constructor and a primary key**
+To create you need:
+- `@Entity` Annotation on the class 
+- no-arg constructor  
+- primary key
 
 we can specify the table name using the `@Table` annotation
-
 ## Defining IDs
 Each JPA entity must have a primary key that uniquely identifies it. The `@Id` annotations defines the primary key. 
 
 We can generate the identifiers in different ways, which are specified by the `@GeneratedValue` annotation.
 
-We can choose from four id generation strategies with the _strategy_ element. **The value can be _AUTO, TABLE, SEQUENCE,_ or _IDENTITY_**
+We can choose from four id generation strategies with the _strategy_ element. 
+**The value can be: _AUTO, TABLE, SEQUENCE,_ or _IDENTITY_**
 _You can read more on that in the references section._
 
 ``` Java
@@ -29,7 +33,7 @@ public class Student {
 ### Columns
 we can use the `@Column` annotation to mention the details of a column in the table.
 
-_you can check more on the column properties in the [[Appendix#`@column` properties||Appendix]]_
+_you can check more on the column properties in the [[Appendices/Appendix#`@column` properties||Appendix]]_
 
 ``` Java
 @Column(name="STUDENT_NAME", length=50, nullable=false, unique=false) private String name;
@@ -58,8 +62,6 @@ private Role role;
 ```
 
 ### Composite attributes
-These are for attributes that are consistent of multiple columns such as address, full name etc..
-
 ``` Java
 @Embeddable
 public class Address {
@@ -90,7 +92,7 @@ public class DoublePrimaryKeyEntity {
 }
 
 @Embeddable
-// this class must implement Serializable for this to work
+
 public class DoublePrimaryKeyId implements Serializable {
    private String idOne;
    private String idTwo;
@@ -99,6 +101,10 @@ public class DoublePrimaryKeyId implements Serializable {
 
 ```
 
+> [!attention]
+> The embedded id class must implement Serializable for this to work
+
+# Example
 
 ``` Java
 import jakarta.persistence.*;
@@ -116,18 +122,15 @@ public class User {
     @Column(nullable = false, unique = true)
     private String username;
 
-    // ✅ Example of an embedded value object
-
-
+//to be revisted on relations
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Post> posts;
 
+
+// to be revisited in logging and entity life cycle
     @Column(updatable = false)
     private LocalDateTime createdAt;
-
     private LocalDateTime updatedAt;
-
-    // ✅ Example of @Transient field (not stored in DB)
 
 
     @PrePersist
@@ -135,7 +138,6 @@ public class User {
         createdAt = LocalDateTime.now();
         updatedAt = createdAt;
     }
-
     @PreUpdate
     protected void onUpdate() {
         updatedAt = LocalDateTime.now();
@@ -143,7 +145,6 @@ public class User {
 
     // Getters & setters...
 }
-
 
 
 @Entity
@@ -172,6 +173,9 @@ public class Post {
 
 
 ```
+
+> [!summary]
+> `@Entity`, `@Table`, `@Column`, `@Id`, `@Transient`, `@Enumerated`, `@Embedded`, `@Embeddable`.
 
 > [!todo]
 > Research

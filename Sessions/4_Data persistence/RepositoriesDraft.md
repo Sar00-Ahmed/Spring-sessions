@@ -1,11 +1,12 @@
 #todo 
 - [ ] Optional return type
-- [ ] custom queries 
-- [ ] native queries 
+- [x] custom queries 
+- [x] native queries 
 - [ ] jdbc template
 - [ ] pagination
 - [ ] batches
 - [ ] procedures
+- [ ] properties persistance settings in spring
 
 
 # Query methods
