@@ -1,0 +1,1 @@
+1. c) It runs on a remote server and is accessed via a web browser.
