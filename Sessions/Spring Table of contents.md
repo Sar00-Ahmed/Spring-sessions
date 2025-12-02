@@ -2,11 +2,11 @@
 [[2_Configurations content]]
 [[3_controller]]
 [[4_Data persistence]]
+[[5_Service]]
 
-
-[[Security]]
-[[Integration]]
-[[Common libraries]]
+[[AOP]]
+[[6_Security]]
+[[Appendices]]
 - - - 
 [[Spring Structure.canvas|Spring Structure]]
 
