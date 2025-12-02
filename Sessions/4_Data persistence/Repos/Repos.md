@@ -1,4 +1,0 @@
-[[Usage & history]]
-[[Queries]]
-
-#index 
